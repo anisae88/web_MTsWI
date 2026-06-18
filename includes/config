@@ -1,0 +1,7 @@
+<?php
+$koneksi = mysqli_connect("localhost", "root", "", "db_mtswi");
+// Jika gagal, tampilkan pesan agar kita tahu masalahnya
+if (!$koneksi) {
+    die("Koneksi Database Gagal: " . mysqli_connect_error());
+}
+?>
