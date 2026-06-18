@@ -1,0 +1,35 @@
+document.addEventListener("DOMContentLoaded", function () {
+    // Pesan ini buat mastiin file JS-nya beneran udah nyambung
+    console.log("JS berhasil diload!"); 
+
+    const counters = document.querySelectorAll(".angka-animasi");
+
+    // Cek dulu, kalau di halamannya ada animasi angka, baru jalankan kodenya
+    if (counters.length > 0) {
+        const durasiAnimasi = 3000; // Pas 3 detik
+        const frameRate = 30;
+
+        counters.forEach(counter => {
+            const targetAttr = counter.getAttribute("data-target");
+            
+            // Skip kalau elemennya gak punya data-target biar gak error NaN
+            if (!targetAttr) return; 
+
+            const target = +targetAttr;
+            const totalLangkah = durasiAnimasi / frameRate;
+            const penambahanKecepatan = target / totalLangkah;
+            let nilaiSekarang = 0;
+
+            const jalankanAnimasi = setInterval(() => {
+                nilaiSekarang += penambahanKecepatan;
+                
+                if (nilaiSekarang >= target) {
+                    counter.innerText = target; 
+                    clearInterval(jalankanAnimasi); 
+                } else {
+                    counter.innerText = Math.ceil(nilaiSekarang); 
+                }
+            }, frameRate);
+        });
+    }
+});
