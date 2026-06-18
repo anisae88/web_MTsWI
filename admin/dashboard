@@ -1,0 +1,63 @@
+<?php 
+session_start();
+if($_SESSION['status'] != "login"){
+    header("Location: login.php");
+    exit();
+}
+
+// --- KONEKSI PAKSA ---
+// Langsung deklarasikan $koneksi di sini, tidak perlu panggil file lain
+$koneksi = mysqli_connect("localhost", "root", "", "db_mtswi");
+
+if (mysqli_connect_errno()) {
+    die("Koneksi gagal: " . mysqli_connect_error());
+}
+
+include 'sidebar.php'; 
+
+// Query untuk data
+$total = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) as total FROM pendaftaran"))['total'];
+?>
+
+<div style="margin-left: 280px; padding: 40px; font-family: 'Inter', sans-serif; background-color: #f5f5f5; min-height: 100vh;">
+    <!-- Tulisan DASHBOARD warna CC8432 & tidak mepet sidebar -->
+    <h2 style="color: #CC8432; margin-bottom: 30px;">DASHBOARD</h2>
+    
+    <!-- Area Kotak -->
+    <div style="background-color: #59ABDB; padding: 30px; border-radius: 8px; display: flex; gap: 20px; flex-wrap: wrap;">
+        <?php 
+        $items = [["Total Pendaftar", $total], ["Diproses", 0], ["Lulus", $total], ["Tidak Lulus", 0]];
+        foreach($items as $i) {
+            echo '<div style="background: white; padding: 25px 20px; border-radius: 8px; width: 150px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <div style="font-size: 28px; font-weight: 700; color: #004487;">'.$i[1].'</div>
+                    <div style="color: #555; font-size: 13px; margin-top: 5px;">'.$i[0].'</div>
+                  </div>';
+        }
+        ?>
+    </div>
+
+    <!-- Tulisan Pendaftar Terbaru warna CC8432 -->
+    <h3 style="color: #CC8432; margin-top: 40px;">Pendaftar Terbaru</h3>
+    <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        <table style="width: 100%; border-collapse: collapse;">
+            <tr style="text-align: left; color: #004487;">
+                <th style="padding: 10px; border-bottom: 2px solid #ddd;">No</th>
+                <th style="padding: 10px; border-bottom: 2px solid #ddd;">No Pendaftaran</th>
+                <th style="padding: 10px; border-bottom: 2px solid #ddd;">Nama Lengkap</th>
+                <th style="padding: 10px; border-bottom: 2px solid #ddd;">Asal Sekolah</th>
+            </tr>
+            <?php
+            $q = mysqli_query($koneksi, "SELECT * FROM pendaftaran ORDER BY id DESC LIMIT 5");
+            $no = 1; // Inisialisasi nomor
+            while($d = mysqli_fetch_assoc($q)) {
+                echo "<tr>
+                        <td style='padding: 12px; border-bottom: 1px solid #eee;'>".$no++."</td>
+                        <td style='padding: 12px; border-bottom: 1px solid #eee;'>{$d['nomor_pendaftaran']}</td>
+                        <td style='padding: 12px; border-bottom: 1px solid #eee;'>{$d['nama_lengkap']}</td>
+                        <td style='padding: 12px; border-bottom: 1px solid #eee;'>{$d['asal_sekolah']}</td>
+                      </tr>";
+            }
+            ?>
+        </table>
+    </div>
+</div>
