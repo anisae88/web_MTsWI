@@ -1,0 +1,57 @@
+<?php 
+// Naik satu level ke folder utama
+include '../includes/header.php'; 
+?>
+
+<div style="padding: 50px 10%; background-color: #FFFFFF; line-height: 1.6; color: #333;">
+    
+    <!-- Judul Berita dengan Garis Oranye Mengikuti Panjang Kalimat -->
+    <div style="text-align: center; margin-bottom: 30px; display: inline-block; width: 100%;">
+        <h1 style="color: #004487; margin: 0 auto; display: inline-block; max-width: 80%;">
+            Bekali Pengawas, Kepala MTs WI: Jalankan Amanah Ujian dengan Niat Ibadah
+        </h1>
+        <div style="width: 50%; height: 3px; background-color: #CC8432; margin: 10px auto 0 auto;"></div>
+    </div>
+
+    <!-- Paragraf Pembuka -->
+    <p style="text-align: justify; margin-bottom: 20px;">
+        <strong>KEBARONGAN</strong> - Menjelang pelaksanaan Tes Kemampuan Akademik Dasar (TKAD) dan Ujian Madrasah (UM), MTs WI kembali mematangkan persiapan. Pada Kamis (16/4), seluruh jajaran pengawas dan panitia berkumpul di ruang kelas 8E untuk menyamakan visi demi suksesnya agenda besar yang akan berlangsung mulai Senin, 20 hingga Sabtu, 25 April 2026 mendatang.
+    </p>
+    
+    <p style="text-align: justify; margin-bottom: 30px;">
+        Rapat koordinasi ini bukan sekadar urusan teknis, melainkan menjadi bentuk ikhtiar bersama agar rangkaian ujian dapat berjalan tertib, lancar, dan penuh keberkahan.
+    </p>
+
+    <!-- Gambar 1 -->
+    <!-- Gambar berjejer -->
+    <div style="margin-bottom: 30px; display: flex; justify-content: center; gap: 20px;">
+        <img src="../assets/img/berita/berita_ke1.1.png" style="width: 40%; border-radius: 8px;">
+        <img src="../assets/img/berita/berita_ke1.2.png" style="width: 40%; border-radius: 8px;">
+    </div>
+
+    <!-- Paragraf Tengah -->
+    <p style="text-align: justify; margin-bottom: 30px;">
+               Dalam arahannya, Kepala MTs WI, Bapak Sunaryo, S.Pd., memberikan pembekalan khusus kepada para pengawas ujian. Beliau menekankan bahwa tugas mengawasi bukan sekadar formalitas, melainkan amanah yang harus dijalankan dengan tanggung jawab penuh, kejujuran, dan profesionalisme.<br>
+                    Apalagi, para pengawas dari MTs WI tidak hanya bertugas di lingkungan madrasah sendiri, tetapi juga dikirim untuk bertugas di luar madrasah. Integritas pengawas menjadi cermin kualitas madrasah di mata masyarakat luas.
+Agar tidak terjadi kendala teknis di lapangan, para pengawas juga dibekali pemahaman mendalam terkait prosedur ujian, di antaranya:<br>
+1. Tata cara pengisian Lembar Jawaban Komputer (LJK).<br>
+2. Penanganan lembar jawaban Ujian Madrasah (UM).<br>
+3. Penegakan tata tertib pelaksanaan ujian bagi seluruh peserta.<br>
+     Langkah ini diambil untuk memastikan setiap santri dapat mengerjakan ujian dengan tenang tanpa terganggu oleh kesalahan administratif.
+    </p>
+
+    <!-- Gambar 2 -->
+    <div style="margin-bottom: 30px; text-align: center;">
+        <img src="../assets/img/berita/berita_ke1.3.png" style="width: 80%; border-radius: 8px;">
+    </div>
+
+    <!-- Paragraf Penutup -->
+    <p style="text-align: justify; margin-bottom: 30px;">
+             Hal menarik dalam rapat ini adalah penekanan sisi spiritual. Bapak Sunaryo, S.Pd. mengingatkan bahwa pelaksanaan ujian adalah bagian dari niat ibadah kepada Allah SWT. Dengan niat yang benar, kerja keras para guru dan panitia akan bernilai pahala.
+    “Dengan niat yang ikhlas dan kerja sama yang baik, insyaAllah pelaksanaan TKAD dan Ujian Madrasah akan berjalan lancar dan sukses serta membawa hasil yang terbaik,” ungkap beliau memberikan semangat kepada seluruh peserta rapat.<br>
+           Dengan persiapan yang matang dan semangat kebersamaan yang kuat, MTs WI Kebarongan kini siap menyelenggarakan TKAD dan Ujian Madrasah. Harapannya, kedisiplinan dan kekompakan seluruh unsur madrasah dapat mengantarkan para santri meraih hasil terbaik yang membanggakan bagi keluarga dan madrasah.
+    </p>
+
+</div>
+
+<?php include '../includes/footer.php'; ?>
