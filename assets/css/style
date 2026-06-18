@@ -1,0 +1,38 @@
+
+
+.dropdown { 
+    position: relative; 
+    cursor: pointer; 
+}
+
+/* Memastikan dropdown tidak hilang saat kursor sedikit bergeser */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #004487;
+    min-width: 220px; /* Saya sedikit lebarkan agar teks tidak terpotong */
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+    padding: 10px 0;
+    border-radius: 0 0 8px 8px; /* Sudut membulat agar lebih manis */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Bayangan agar terlihat 'melayang' */
+}
+
+/* Munculkan saat hover pada .dropdown atau .dropdown-content itu sendiri */
+.dropdown:hover .dropdown-content { 
+    display: block; 
+}
+
+.dropdown-content a {
+    color: white !important;
+    padding: 10px 20px !important; /* Padding lebih luas agar enak diklik */
+    display: block;
+    text-decoration: none;
+    font-size: 15px;
+    transition: background-color 0.3s ease; /* Transisi halus saat di-hover */
+}
+
+.dropdown-content a:hover { 
+    background-color: #003366; 
+}
