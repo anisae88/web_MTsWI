@@ -1,0 +1,39 @@
+<?php 
+// Naik satu folder ke atas untuk memanggil file include
+include '../includes/header.php'; 
+?>
+
+    <div style="padding: 50px 10% 20px 10%; background-color: white; text-align: center;">
+        <h1 style="color: #004487; margin: 0; display: inline-block;">Drumband</h1>
+        <div style="width: 80px; height: 3px; background-color: #CC8432; margin: 10px auto 0 auto;"></div>
+    </div>
+
+    <div style="width: 100%; background-color: white; padding-bottom: 50px;">
+        <img src="../assets/img/ekstra/ekstra_drumband1.png" alt="PMR" style="width: 100%; display: block;">
+    </div>
+
+    <div style="padding: 0 10% 50px 10%;">
+        <h3 style="color: #004487; display: inline-block; margin-bottom: 5px;">Drumband MTs WI Kebarongan</h3>
+        <div style="width: 320px; height: 3px; background-color: #CC8432; margin-bottom: 20px;"></div>
+        
+        <p style="color: #555; line-height: 1.6; margin-bottom: 40px; text-align: justify;">
+                      Tim ini terdiri dari seluruh santriwan/wati yang mengikuti kegiatan ekstrakurikuler Drumband yang sudah mengikuti seleksi dan dinyatakan lulus sehingga resmi menjadi Drumband MTs WI Kebrongan.<br>
+     Drumben, disebut juga orkes barisan (bahasa Inggris: drum band, marching band) adalah sekelompok barisan orang yang memainkan satu atau beberapa lagu dengan menggunakan sejumlah kombinasi alat musik (tiup, perkusi, dan sejumlah instrumen pit) secara bersama-sama. Penampilan drumben merupakan kombinasi dari permainan musik (tiup, dan perkusi) serta aksi baris-berbaris dari pemainnya. Umumnya, penampilan Drumben dipimpin oleh satu atau dua orang Komandan Lapangan dan dilakukan baik di lapangan terbuka maupun lapangan tertutup dalam barisan yang membentuk formasi dengan pola yang senantiasa berubah-ubah sesuai dengan alur koreografi terhadap lagu yang dimainkan, dan diiringi pula dengan aksi tarian yang dilakukan oleh sejumlah pemain bendera.<br>
+      Drumben umumnya dikategorikan menurut fungsi, jumlah anggota, komposisi dan jenis peralatan yang digunakan, serta gaya atau corak penampilannya. Penampilan drumben pada mulanya adalah sebagai pengiring parade perayaan ataupun festival yang dilakukan di lapangan terbuka dalam bentuk barisan dengan pola yang tetap dan kaku, serta memainkan lagu-lagu mars. Dinamika keseimbangan penampilan diperoleh melalui atraksi individual yang dilakukan oleh mayoret, ataupun beberapa personel pemain instrumen. Namun saat ini permainan musik drumben dapat dilakukan baik di lapangan terbuka ataupun tertutup sebagai sebagai pengisi acara dalam suatu perayaan, ataupun kejuaraan.<br>
+      Komposisi musik yang dimainkan drumben umumnya bersifat lebih harmonis dan tidak semata-mata memainkan lagu dalam bentuk mars, ragam peralatan yang digunakan lebih kompleks, formasi barisan yang lebih dinamis, dan corak penampilannya membuat drumben merupakan kategori yang terpisah dan berbeda dengan marching band yang umumnya memiliki komposisi penggunaan instrumen perkusi yang lebih banyak dari instrumen musik tiup. Tipikal bentuk dan penampilan marching band yang paling dikenal adalah marching band yang dimiliki oleh institusi kemiliteran ataupun kepolisian. Adaptasi lebih lanjut dari penampilan drumben di atas panggung adalah dalam bentuk brass band.
+        </p>
+        <div style="width: 100%; text-align: center; margin-bottom: 40px;">
+            <img src="../assets/img/ekstra/ekstra_drumband2.png"  
+                 style="width: 967px; height: 388px; object-fit: cover; border-radius: 8px; max-width: 100%;">
+        </div>
+
+        <h2 style="color: #004487; display: inline-block; margin-bottom: 5px;">Beberapa Ekstrakurikuler</h2>
+        <div style="width: 250px; height: 3px; background-color: #CC8432; margin-bottom: 30px;"></div>
+        
+        <?php include '../includes/daftar_ekstra.php'; ?>
+    </div>
+
+<?php 
+// Footer sudah mencakup tag </body> dan </html>
+include '../includes/footer.php'; 
+?>
